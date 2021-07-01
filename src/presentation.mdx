@@ -75,3 +75,41 @@ With this
 - Manages caching for us so we don't have to reach for Redux,
 - Provides loading, error, and success states,
 - And does _a lot_ more that we probably won't get to cover here.
+
+---
+
+## What does React Query _not_ do or change?
+
+<Step styles={{
+  before: {opacity: 0},
+  after: {opacity: 1, transition: 'all 0.2s ease-out'},
+}}
+>
+
+<Step styles={{
+  before: {opacity: 0},
+  after: {opacity: 1, transition: 'all 0.2s ease-out'},
+}}
+>
+
+- Our API wrappers remain exactly the same: more on _query functions_ later.
+- Any truly local/client state management is not covered by React Query
+  - We don't have much (or any) of this, but e.g. layout state or current theme
+- React Query cannot replace _all_ API/async fetching calls in our app.
+  - Components that need an async way to load data, e.g. async react-select.
+
+</Step>
+
+<Step styles={{
+  before: {opacity: 0},
+  after: {opacity: 1, transition: 'all 0.2s ease-out'},
+}}
+>
+
+```js file=./react-select-example.js
+
+```
+
+</Step>
+
+</Step>
