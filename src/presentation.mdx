@@ -39,8 +39,9 @@ From <https://react-query.tanstack.com/overview>:
 ## But what does that mean?
 
 <Step styles={{
-  before: {opacity: 0},
-  after: {opacity: 1, transition: 'all 0.2s ease-out'},
+  before: {display: 'none'},
+  current: {display: '', transition: 'all 0.2s ease-out'},
+  after: {display: 'none'}
 }}
 >
 
@@ -48,36 +49,8 @@ From <https://react-query.tanstack.com/overview>:
 
 It replaces this
 
-```js
-import React, {useState, useCallback, useEffect} from 'react';
-import { getShipment } from "App/api/shipments";
+```js file=./before.js
 
-// …
-
-const [shipmentDetailsResponse, setShipmentDetailsResponse] = useState();
-const [isShipmentDetailsLoading, setIsShipmentDetailsLoading] = useState(false);
-
-const fetchShipment = useCallback(
-	async (id) => {
-		setIsShipmentDetailsLoading(true);
-		try {
-			const response = await getShipment(id);
-			setShipmentDetailsResponse(JSON.stringify(response.data, null, 2));
-		} catch (error) {
-			console.error(error);
-			setError("Error retrieving shipment!", error.message);
-		} finally {
-			setIsShipmentDetailsLoading(false);
-		}
-	},
-	[setError]
-);
-
-useEffect(() => {
-	if (!shipmentDetailsResponse) {
-		fetchShipment(shipmentId);
-	}
-}, [shipmentDetailsResponse]);
 ```
 
 </Block>
@@ -86,19 +59,8 @@ useEffect(() => {
 
 With this
 
-```js
-import React from 'react';
-import { getShipment } from "App/api/shipments";
-import { useQuery } from "react-query";
+```js file=./after.js
 
-// …
-
-const fetchShipmentDetailsQuery = useQuery(["shipments", shipmentId], (id) => getShipment(id), {
-	onError: (error) => {
-		console.error(error);
-		setError("Error retrieving shipment!", error.message);
-	},
-});
 ```
 
 </Block>
