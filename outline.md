@@ -1,0 +1,16 @@
+- What is React Query?
+- What isn't React Query?
+- Query basics
+  - Query keys
+  - Query functions
+  - Query result object, including statuses
+- Mutation basics
+  - What is a "mutation" and why is it different than a query?
+  - Mutation function, including its single argument interface
+- How React Query fits into frontend-web
+- Examples
+  - Basic
+  - Custom hook
+  - Updates from mutation response
+- What's next? This overview barely scratches the surface
+- Questions
