@@ -38,6 +38,14 @@ From <https://react-query.tanstack.com/overview>:
 
 ## But what does that mean?
 
+<Step styles={{
+  before: {opacity: 0},
+  after: {opacity: 1, transition: 'all 0.2s ease-out'},
+}}
+>
+
+<Block>
+
 It replaces this
 
 ```js
@@ -72,9 +80,9 @@ useEffect(() => {
 }, [shipmentDetailsResponse]);
 ```
 
----
+</Block>
 
-## But what does that mean?
+<Block>
 
 With this
 
@@ -92,3 +100,7 @@ const fetchShipmentDetailsQuery = useQuery(["shipments", shipmentId], (id) => ge
 	},
 });
 ```
+
+</Block>
+
+</Step>
