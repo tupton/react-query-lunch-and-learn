@@ -41,6 +41,7 @@ From <https://react-query.tanstack.com/overview>:
 It replaces this
 
 ```js
+import React, {useState, useCallback, useEffect} from 'react';
 import { getShipment } from "App/api/shipments";
 
 // …
@@ -78,6 +79,7 @@ useEffect(() => {
 With this
 
 ```js
+import React from 'react';
 import { getShipment } from "App/api/shipments";
 import { useQuery } from "react-query";
 
