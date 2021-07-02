@@ -7,7 +7,7 @@ import {filterAccessorials} from 'App/utils/globals';
 
 export const AccessorialField = () => {
   const getAccessorialsQuery = useQuery('accessorials', () => fetchAccessorialCodesPromise()); // highlight-line
-  const accessorials = filterAccessorials(getAccessorialsQuery.data?.body)?.drayageShipment || [];
+  const accessorials = filterAccessorials(getAccessorialsQuery.data?.body)?.drayageShipment || []; // highlight-line
   return (
     <Field
       name="accessorials"
