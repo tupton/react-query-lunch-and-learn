@@ -109,9 +109,7 @@ Query keys are important because they uniquely describe the data being fetched, 
 
 ### Query keys
 
-#### If your query function depends on a variable, include it in your query key
-
-Since query keys uniquely describe the data they are fetching, they should include any variables you use in your query function that change. For example:
+> If your query function depends on a variable, include it in your query key. Since query keys uniquely describe the data they are fetching, they should include any variables you use in your query function that change. For example:
 
 ```js
 function Todos({todoId}) {
@@ -121,11 +119,11 @@ function Todos({todoId}) {
 
 From <https://react-query.tanstack.com/guides/query-keys>:
 
-It's useful to think of these array keys as analogous to the dependencies in a `useEffect` dependency array.
+It's useful to think of these array query keys as analogous to the dependencies in a `useEffect` dependency array.
 
 <Note>
 
-Most of our queries involve some kind of id, so most array keys will include at least two elements: the descriptor of the query and the id it depends on.
+Most of our queries involve some kind of id, so most array query keys will include at least two elements: the descriptor of the query and the id it depends on.
 
 </Note>
 
