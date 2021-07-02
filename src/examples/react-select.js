@@ -6,6 +6,7 @@ import {FormikSelect} from 'shipwell-ui';
 import {fetchBrokerShipperRelationshipsPromise} from 'App/api/brokers';
 
 export const ShipmentDetails = ({company}) => {
+  // highlight-start
   const getCustomers = useCallback(
     (opts = {}) => {
       const {brokerage} = company;
@@ -15,7 +16,11 @@ export const ShipmentDetails = ({company}) => {
     },
     [company]
   );
+  // highlight-end
+
+  // highlight-start
   const getCustomersQuery = useQuery(['brokerages', company?.brokerage?.id], () => getCustomers(), {
+    // highlight-end
     enable: company?.brokerage?.id
   });
 
@@ -25,13 +30,15 @@ export const ShipmentDetails = ({company}) => {
       label="Customer Account"
       component={FormikSelect}
       async
-      defaultOptions={getCustomersQuery.data?.body?.results}
+      defaultOptions={getCustomersQuery.data?.body?.results} // highlight-line
       getOptionLabel={(option) => option.company.name}
       getOptionValue={(option) => option.company.id}
+      // highlight-start
       loadOptions={async (input) => {
         const response = await getCustomers({companyContains: input});
         return response?.body?.results;
       }}
+      // highlight-end
     />
   );
 };
