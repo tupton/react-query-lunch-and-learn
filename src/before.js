@@ -1,8 +1,9 @@
-import React, {useState, useCallback, useEffect} from 'react';
-import {getShipment} from 'App/api/shipments';
+import React, {useState, useCallback, useEffect} from 'react'; // highlight-line
+import {getShipment} from 'App/api/corrogo';
 
 // eslint-disable-next-line react/prop-types
 export const ShipmentDetails = ({shipmentId, setError}) => {
+  // highlight-start
   const [shipmentDetailsResponse, setShipmentDetailsResponse] = useState();
   const [isShipmentDetailsLoading, setIsShipmentDetailsLoading] = useState(false);
 
@@ -31,6 +32,7 @@ export const ShipmentDetails = ({shipmentId, setError}) => {
   if (isShipmentDetailsLoading) {
     return 'Loading…';
   }
+  // highlight-end
 
   return <pre>{shipmentDetailsResponse}</pre>;
 };
