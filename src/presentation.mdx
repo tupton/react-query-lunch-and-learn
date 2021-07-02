@@ -290,7 +290,8 @@ The react-select example is an edge case, but I wanted te bring it up to showcas
 - No more boilerplate for requests, loading, and error states: React Query includes all this.
 - Caching happens automatically.
   - We can put (re-usable) queries in the components that need that data, regardless of the component hierarchy.
-- Testing? We mock API wrappers in exactly the same way.
+- Testing?
+  - We mock API wrappers in exactly the same way we currently do – nothing changes.
   - `makeWrapper` in `App/test-utils` already has a `<QueryClientProvider>` wrapper.
 
 </StepTransition>
