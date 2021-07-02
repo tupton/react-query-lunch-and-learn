@@ -5,10 +5,6 @@ export default {
 	...theme,
 	styles: {
 		...theme.styles,
-		pre: {
-			...theme.styles.pre,
-			padding: "2rem",
-		},
 		code: {
 			...syntaxTheme,
 		},
