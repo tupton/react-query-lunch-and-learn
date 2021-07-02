@@ -280,7 +280,29 @@ The react-select example is an edge case, but I wanted te bring it up to showcas
 
 ---
 
-## Recap how React Query fits into frontend-web
+## How does React Query fit into `shipwell/frontend-web`?
+
+<StepTransition>
+
+- Almost all of these examples are taken from our existing codebase, except where noted.
+- We can use React Query for existing API interactions right now.
+  - We are using this for Drayage work, but we can all use it in new work right now.
+- No more boilerplate for requests, loading, and error states: React Query includes all this.
+- Caching happens automatically.
+  - We can put (re-usable) queries in the components that need that data, regardless of the component hierarchy.
+- Testing? We mock API wrappers in exactly the same way.
+  - `makeWrapper` in `App/test-utils` already has a `<QueryClientProvider>` wrapper.
+
+</StepTransition>
+
+<Note>
+
+Examples _not_ taken from `frontend-web` are taken or adapted directly from the RQ docs.
+
+Caching: This means we don't have to worry about making a request in a parent component and passing the data down to its children (or storing it in redux) to reduce network calls.
+
+Testing: any component that uses `useQuery` or `useMutation` needs the `<QueryClientProvider>` wrapper, but it's provided automatically by `makeWrapper`.
+</Note>
 
 ---
 
