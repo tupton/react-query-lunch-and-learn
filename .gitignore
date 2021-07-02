@@ -9,3 +9,5 @@ Thumbs.db
 *.sublime-workspace
 *.log
 package-lock.json
+
+dist/
