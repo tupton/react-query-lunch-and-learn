@@ -1,5 +1,4 @@
 - What is React Query?
-- What isn't React Query?
 - Query basics
   - Query keys
   - Query functions
@@ -7,6 +6,7 @@
 - Mutation basics
   - What is a "mutation" and why is it different than a query?
   - Mutation function, including its single argument interface
+- What isn't React Query?
 - How React Query fits into frontend-web
 - Examples
   - Basic
