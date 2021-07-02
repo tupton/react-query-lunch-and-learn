@@ -5,7 +5,7 @@ import {useQuery} from 'react-query'; // highlight-line
 // eslint-disable-next-line react/prop-types
 export const ShipmentDetails = ({shipmentId, setError}) => {
   // highlight-start
-  const fetchShipmentDetailsQuery = useQuery(['shipments', shipmentId], (id) => getShipment(id), {
+  const fetchShipmentDetailsQuery = useQuery(['shipments', shipmentId], () => getShipment(shipmentId), {
     onError: (error) => {
       console.error(error);
       setError('Error retrieving shipment!', error.message);
