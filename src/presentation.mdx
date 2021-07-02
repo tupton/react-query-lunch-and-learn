@@ -131,6 +131,38 @@ Most of our queries involve some kind of id, so most array keys will include at 
 
 ---
 
+## Query Basics
+
+### Query functions
+
+<StepTransition>
+
+<Block>
+
+From <https://react-query.tanstack.com/guides/query-functions>:
+
+> A query function can be literally any function that **returns a promise**. The promise that is returned should either **resolve the data** or **throw an error**.
+
+</Block>
+
+This should sound very familiar: it exactly describes our _existing_ API wrapper functions. This means we can use React Query for any API interaction, right now.
+
+</StepTransition>
+
+---
+
+## Query Basics
+
+### Query functions
+
+```js file=./examples/accessorials.js
+
+```
+
+`fetchAccessorialCodesPromise` is an existing API wrapper function that lives in `frontend-web` today, and we can use it with `useQuery` as-is.
+
+---
+
 ## What does React Query _not_ do or change?
 
 <StepTransition>
