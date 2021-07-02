@@ -163,6 +163,21 @@ This should sound very familiar: it exactly describes our _existing_ API wrapper
 
 ---
 
+## Query basics
+
+### Query result
+
+<StepTransition>
+
+- `data` is the main event: it holds the result that the query function resolved to.
+- `error` contains any error that the query function threw.
+- `refetch` lets us imperatively re-query for data. This is rarely needed, but comes in handy when it is.
+- Many status booleans that will let us conditionally render the results of the query.
+
+</StepTransition>
+
+---
+
 ## What does React Query _not_ do or change?
 
 <StepTransition>
