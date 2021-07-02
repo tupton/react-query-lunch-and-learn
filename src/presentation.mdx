@@ -151,6 +151,14 @@ This should sound very familiar: it exactly describes our _existing_ API wrapper
 
 </StepTransition>
 
+<Note>
+
+Query functions don't usually take any arguments. Any arguments that the API wrapper needs should come from _outside_ the query function, e.g. from a prop or bit of state.
+
+Query functions are passed the query key, which can be useful but slightly more difficult to reason about.
+
+</Note>
+
 ---
 
 ## Query basics
