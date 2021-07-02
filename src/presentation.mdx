@@ -325,6 +325,7 @@ Testing: any component that uses `useQuery` or `useMutation` needs the `<QueryCl
 - React Query devtools <https://react-query.tanstack.com/devtools>
   - Try them out today by adding `REACT_QUERY_DEVTOOLS=true` to `.env` (copy `.env.local` first) and running `npm run serve`.
 - Dependent queries
+- Reusable hooks
 - Optimistic updates
 - Prefetching
 
@@ -333,6 +334,7 @@ Testing: any component that uses `useQuery` or `useMutation` needs the `<QueryCl
 <Note>
 
 - Dependent queries will be used quite often to defer queries until we have some other piece of data.
+- Reusable hooks can be useful for widely- or commonly-used queries and mutations. And optimistic updates, if we decide to use them.
 - Optimistic updates (and rollbacks) are an optimization but can help to make long-running queries or mutatinos seem faster.
 - Prefetching could be super useful for things like Compass.
 
