@@ -178,13 +178,61 @@ This should sound very familiar: it exactly describes our _existing_ API wrapper
 
 ## Mutation basics
 
+<StepTransition>
+
+<Block>
+
+From <https://react-query.tanstack.com/guides/mutations>:
+
+> Unlike queries, mutations are typically used to create/update/delete data or perform server side-effects. For this purpose, React Query exports a `useMutation` hook.
+
+</Block>
+
+A mutation is any API request that modifies data on the backend: most POST, PUT, and DELETE requests. The signature for a mutation is slightly different, which is why React Query provides a separate `useMutation` hook.
+
+</StepTransition>
+
 ---
 
-## Recap how React Query fits into frontend-web
+## Mutation basics
 
----
+<StepTransition>
 
-## Examples
+<Block>
+
+```js
+function App() {
+  const mutation = useMutation((newTodo) => axios.post('/todos', newTodo));
+
+  if (mutation.isLoading) {
+    return 'Adding todo…';
+  }
+  return (
+    <button
+      onClick={() => {
+        mutation.mutate({id: new Date(), title: 'Do Laundry'});
+      }}>
+      Create Todo
+    </button>
+  );
+}
+```
+
+Example adapted from <https://react-query.tanstack.com/guides/mutations>.
+
+</Block>
+
+<StepTransition>
+
+- Mutations do not have query keys.
+- `mutate` takes a single argument.
+  - For API methods that take multiple arguments, destructure in the mutation function.
+- `mutateAsync` is a Promise-based API for mutations, which is useful when we need to chain requests.
+  - The signature is the same as `mutate`, but the promise it returns resolves with `data` on success or throws.
+
+</StepTransition>
+
+</StepTransition>
 
 ---
 
@@ -217,6 +265,14 @@ This should sound very familiar: it exactly describes our _existing_ API wrapper
 The react-select example is an edge case, but I wanted te bring it up to showcase how RQ doesn't apply to all cases _and_ to show how we can still use it to reduce boilerplate.
 
 </Note>
+
+---
+
+## Recap how React Query fits into frontend-web
+
+---
+
+## Examples
 
 ---
 
