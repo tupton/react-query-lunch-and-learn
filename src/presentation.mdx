@@ -254,9 +254,9 @@ Example adapted from <https://react-query.tanstack.com/guides/mutations>.
 
 <StepTransition>
 
-- Our API wrappers remain exactly the same: more on _query functions_ later.
+- Our API wrappers remain exactly the same: we can use them as-is as query functions.
 - Any truly local/client state management is not covered by React Query
-  - We don't have much (or any) of this, but e.g. layout state or current theme
+  - We don't have much (or any) of this, but client state is e.g. layout state or current theme
 - React Query cannot replace _all_ API/async fetching calls in our app.
   - Components that need an async way to load data, e.g. async react-select.
 
