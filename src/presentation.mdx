@@ -228,15 +228,23 @@ Example adapted from <https://react-query.tanstack.com/guides/mutations>.
 
 <StepTransition>
 
-- Mutations do not have query keys.
+- Mutations do not have query keys because they aren't cached.
 - `mutate` takes a single argument.
   - For API methods that take multiple arguments, destructure in the mutation function.
+  - `useMutation({shipmentId, shipmentDetails}) => updateShipment(shipmentId, shipmentDetails));`
 - `mutateAsync` is a Promise-based API for mutations, which is useful when we need to chain requests.
   - The signature is the same as `mutate`, but the promise it returns resolves with `data` on success or throws.
 
 </StepTransition>
 
 </StepTransition>
+
+<Note>
+
+`mutateAsync`: `mutate` updates the state of the mutation object, and for longer-running mutations this can result in a loading state for some time.
+`mutateAsync` lets us wait for that long-running request to settle so we can chain other API interactions to it.
+
+</Note>
 
 ---
 
