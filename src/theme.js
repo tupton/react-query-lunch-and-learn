@@ -7,6 +7,10 @@ export default {
     ...theme.styles,
     code: {
       ...syntaxTheme
+    },
+    blockquote: {
+      ...theme.styles.blockquote,
+      backgroundColor: 'highlight'
     }
   }
 };
