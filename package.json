@@ -43,7 +43,7 @@
     "lint-staged": ">=10",
     "mdast-flatten-image-paragraphs": "^1.0.0",
     "prettier": ">=2",
-    "react-dev-utils": "^10.2.1",
+    "react-dev-utils": "^11.0.4",
     "rehype-katex": "^4.0.0",
     "remark-code-import": "^0.2.0",
     "remark-emoji": "^2.1.0",
