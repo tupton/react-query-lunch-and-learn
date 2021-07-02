@@ -4,11 +4,7 @@
 
 ## What we will cover
 
-<Step styles={{
-  before: {opacity: 0},
-  after: {opacity: 1, transition: 'all 0.2s ease-out'},
-}}
->
+<StepTransition>
 
 - What is React Query?
 - Query basics
@@ -16,7 +12,7 @@
 - What _isn't_ React Query?
 - How React Query fits into `shipwell/frontend-web`
 
-</Step>
+</StepTransition>
 
 ---
 
@@ -71,26 +67,22 @@ With this
 
 ## React Query
 
+<StepTransition>
+
 - Reduces boilerplate around API calls,
 - Manages caching for us so we don't have to reach for Redux,
 - Provides loading, error, and success states,
 - And does _a lot_ more that we probably won't get to cover here.
 
+</StepTransition>
+
 ---
 
 ## What does React Query _not_ do or change?
 
-<Step styles={{
-  before: {opacity: 0},
-  after: {opacity: 1, transition: 'all 0.2s ease-out'},
-}}
->
+<StepTransition>
 
-<Step styles={{
-  before: {opacity: 0},
-  after: {opacity: 1, transition: 'all 0.2s ease-out'},
-}}
->
+<StepTransition>
 
 - Our API wrappers remain exactly the same: more on _query functions_ later.
 - Any truly local/client state management is not covered by React Query
@@ -98,18 +90,14 @@ With this
 - React Query cannot replace _all_ API/async fetching calls in our app.
   - Components that need an async way to load data, e.g. async react-select.
 
-</Step>
+</StepTransition>
 
-<Step styles={{
-  before: {opacity: 0},
-  after: {opacity: 1, transition: 'all 0.2s ease-out'},
-}}
->
+<StepTransition>
 
 ```js file=./react-select-example.js
 
 ```
 
-</Step>
+</StepTransition>
 
-</Step>
+</StepTransition>
