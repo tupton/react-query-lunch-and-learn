@@ -26,5 +26,3 @@ The Resources slide from the presentation is reproduced here for quick reference
 - React Query Essentials course (paid) <https://learn.tanstack.com/p/react-query-essentials>
 - API reference for `useQuery` <https://react-query.tanstack.com/reference/useQuery>
 - API reference for `useMutation` <https://react-query.tanstack.com/reference/useMutation>
-- [Example component in `shipwell/frontend-web` that uses `useQuery` and `useMutation`](https://github.com/shipwell/frontend-web/blob/24cff118270ea38e5b896dc83d8f6a28ae1fb4d9/src/app/containers/drayageShipment/components/Stops/index.js).
-- [Initial PR and discussion around React Query in `shipwell/frontend-web`](https://github.com/shipwell/frontend-web/pull/4673).
